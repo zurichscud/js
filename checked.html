@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>全选</title>
+</head>
+<body>
+<h1>选择你喜欢的</h1>
+
+<label>
+  <input type="checkbox" name="sports" value="run">
+  跑步
+</label>
+<label>
+  <input type="checkbox" name="sports" value="football">
+  足球
+</label>
+<label>
+  <input type="checkbox" name="sports" value="basketball">
+  篮球
+</label>
+<br>
+<br>
+<button id="bt1">全选</button>
+<button id="bt2">反选</button>
+<button id="bt3">全不选</button>
+<script>
+  var sports = document.getElementsByName("sports");
+  document.getElementById("bt1").addEventListener("click",()=>{
+    for (let i = 0; i < sports.length; i++) {
+      sports[i].checked=true;
+    }
+  })
+  document.getElementById("bt2").addEventListener("click",()=>{
+    for (let i = 0; i < sports.length; i++) {
+      sports[i].checked=!sports[i].checked;
+    }
+  })
+  document.getElementById("bt3").addEventListener("click",()=>{
+    for (let i = 0; i < sports.length; i++) {
+      sports[i].checked=false;
+    }
+  })
+</script>
+
+</body>
+</html>

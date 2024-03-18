@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乌龟游戏</title>
+
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td></td>
+        <td><input class="move" type="button" value="向上走" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input class="move" type="button" value="向左走" /></td>
+        <td></td>
+        <td><input class="move" type="button" value="向右走" /></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input class="move" type="button" value="向下走" /></td>
+        <td></td>
+    </tr>
+</table>
+<!--把乌龟放在一个div-->
+<div id="wugui" style="position: absolute ;left:100px;top:120px;">
+    <img src="1.bmp" border="1" alt=""/>
+</div>
+<!--公鸡图片div-->
+<div id="cock" style="left:200px;position:absolute;top:200px;">
+    <img src="2.bmp" border="1" alt=""/>
+</div>
+<div style="position: absolute;left: 300px">
+  <button id="btn">reset</button>
+</div>
+<script  src="index.js">
+</script>
+</body>
+</html>

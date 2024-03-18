@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>登录验证</title>
+</head>
+<body>
+<form action="/web/demo.html" id="form" method="get">
+  <table>
+    <tr>
+      <td>用户名</td>
+      <td><input type="text" id="u" name="username"></td>
+    </tr>
+    <tr>
+      <td>密码</td>
+      <td><input type="password" id="p" name="password"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="submit" value="登录"></td>
+    </tr>
+  </table>
+
+</form>
+<script>
+  const user = document.getElementById("u");
+  user.addEventListener("blur", () => {
+    user.value = user.value.toUpperCase()
+  })
+  const form=document.getElementById("form")
+  form.addEventListener("submit",()=>{
+    if (form.username.value===""||form.password.value===""){
+      alert("用户名或密码为空，无法登录")
+      return false
+    }
+    return true
+  })
+
+</script>
+</body>
+</html>
